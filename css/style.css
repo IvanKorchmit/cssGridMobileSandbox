@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    text-transform: uppercase;  
+}
+.container {
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 4fr);
+    grid-template-rows: 150px 300px 150px 150px;
+    grid-template-areas: 
+    "head men men men"
+    "her her her her"
+    "mai imag imag ban"
+    "extr extr extr extr";
+}
+.container > * {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.header {
+    background-color:blue;
+    grid-area: head;
+    color: white;
+
+}
+
+.hero {
+    background: black;
+    grid-area: her;
+    color: white;
+
+}
+
+
+.extra {
+    background-color: yellow;
+    grid-area: extr;
+
+}
+.menu {
+    background-color: red;
+    grid-area: men;
+
+}
+.main {
+    background-color: cyan;
+    grid-area: mai;
+
+}
+
+.image {
+    background-color: blue;
+    color: white;
+    grid-area: imag;
+    background-image: url("../img/reloading.gif");
+
+}
+.banner {
+    background-color: greenyellow;
+    grid-area: ban;
+
+}
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 150px 300px 300px 200px 200px 200px;
+        grid-template-areas: 
+        "head men mai"
+        "her her her"
+        "her her her"
+        "ban ban ban"
+        "extr extr extr"
+        "imag imag imag";
+    }
+}
+@media (max-width: 550px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "head"
+        "men"
+        "her"
+        "mai"
+        "ban"
+        "extr"
+        "imag"
+        ;
+        grid-template-rows: 70px 70px 300px 100px 200px 200px 200px;
+    }
+}
